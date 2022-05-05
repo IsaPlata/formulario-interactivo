@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario del Tema_05</title>
+    <!-- Enlace al documento css. no aplicable en codepen. -->
+   <link rel="stylesheet" type="text/css" href="miEstilo.css">
+</head>
+
+<body>
+   <header>
+    <!-- formulario de contacto en html y css -->
+    
+        <div class="formulario" > <!--aplico metodo en lineaonclick="cambiarFondo(this)"--> 
+            <h1>Inscripción a las Jornadas Front End</h1>
+            <p class="obligatorio" >Los campos señalados con <strong> <abbr title = "required"> * </abbr> </strong> son obligatorios .</p>
+            
+             
+              
+              <form method="post" action="mailto:isaplataparra1@gmail.com" enctype="multipart/form-data"> 
+                
+                <fieldset id="contenedor">
+                  <legend>Datos personales</legend>
+                    <div class="nombreApellido">
+                     <div class="arribaAbajo">
+                          <label for="nombre" class="colocar_nombre">Nombre <abbr title="required"  class="obligatorio" >*</abbr> </label>
+                          <input title="escribe tu nombre" required  aria-invalid="true" tabindex=0 type="text" name="nombre" id="nombre" value="" >
+                          
+                      </div>
+                      <div class="arribaAbajo">
+                         <label for="apellidos" class="colocar_nombre">Apellidos<abbr title="required"  class="obligatorio" >*</abbr></label>
+                         <input  title="escribe tu apellido" required  aria-invalid="true"  tabindex=0 type="text" name="apellidos" id="apellidos" value="" > 
+                      </div>
+                 </div>
+               
+                  <div class="nombreApellido">   
+                       <div class="arribaAbajo">
+                         <label for="correoElectronico" class="colocar_email">Correo electrónico<abbr title="required"  class="obligatorio" >*</abbr></label>
+                          <input title="escribe tu correo Electronico" required  aria-invalid="true" tabindex=0 type="email" name="correoElectronico" id="correoElectronico" value="" >
+                     </div>
+                     <div class="arribaAbajo">
+                          <label for="telefono" class="colocar_telefono">Teléfono<abbr title="required"  class="obligatorio" >*</abbr></label>
+                         <input title="escribe tu telefono" required  aria-invalid="true" tabindex=0 type="tel" name="telefono" id="telefono" value=""  >
+                      </div>
+                 </div>
+
+                   <fieldset class="recuadroFoto">
+                    <legend></legend>
+                      <div class="arribaAbajo1">
+                          <label for="foto" class="colocar_fotografia">Fotografía para acreditación</label>
+                          <input tabindex=0 type="file" name="foto" id="foto">
+                     </div>
+                   </fieldset>
+                 
+                </fieldset>
+                   <fieldset class="contenedor">
+                     <legend>Perfil de participante</legend>
+                     <div class="arribaAbajo1">
+                          <label for="motivo" class="colocar_mensaje">¿Por qué está interesado en participar? <abbr title="required"  class="obligatorio" >*</abbr></label>
+                           <textarea title="escribe tu interes" required  aria-invalid="true" tabindex=0 name="motivo" class="texto_mensaje" id="motivo"
+                          rows="6" cols="50" ></textarea><!--referencia en linea de evento y su método -->
+                     </div>
+                     <div class="arribaAbajo">
+                          <label for="actividad" class="colocar_actividad">actividad profesional<abbr title="required"  class="obligatorio" >*</abbr></label>
+                          <select title="selecciona tu nivel de estudios" required aria-invalid="true"  name="actividad" id="actividad" >
+                             <option tabindex=0  value="" selected>Seleccione una actividad</option>
+                             <option tabindex=0 value="bachillerato">Estudiante de bachillerato</option>
+                             <option tabindex=0 value="universitario">Estudiante universitario</option>
+                             <option tabindex=0 value="profesor">Profesor de bachillerato</option>
+                             <option tabindex=0 value="profesorUni">Profesor universitario</option>
+                             <option tabindex=0 value="otra">Otra actividad profesional</option>
+                         </select>
+                     </div>
+                  <div class="arribaAbajo">
+                        <label for="taller" class="colocar_interes">¿En qué talleres está interesado? <abbr title="required"  class="obligatorio" >*</abbr></label>
+                          <p>Para seleccionar más de una opción,mantened pulsada la tecla Control(Windows)/Command(Mac) mientras 
+                           hacéis  clic a las opciones</p>
+                         <select title="seleciona talleresde tu interes" required   aria-invalid="true"  name="taller" id="taller" multiple   >
+                              <option tabindex=0 value="encriptar">La encriptación a lo largo de la historia</option>
+                              <option tabindex=0 value="seguridad">Seguridad informática</option>
+                              <option tabindex=0 value="redes">Redes sociales y teoría de grafos></option>
+                              <option tabindex=0 value="Mates">Matemáticas y azar</option>
+                              <option tabindex=0 value="problemas">Problemas matemáticos del milenio</option>
+                              <option tabindex=0 value="prediccion">La predicción del tiempo</option>
+                              <option tabindex=0 value="fractales">Fractales en el aula</option>
+                         </select>
+                  </div>
+                 
+                 <div role="radiogroup"  aria-labelledby="opcion"  class="arribaAbajo">
+                        
+                         <div id="opcion" class="opcion" >
+                          <p >Seleccione una de las tres opciones siguientes:<abbr title="required"  class="obligatorio" >*</abbr></p>
+
+                         <ul>
+                           <li>
+                            <input id="mayo_4_5"  type="radio" name="asistencia" value="mayo_4_5"  />
+                            <label for="mayo_4_5" >Asistiré los días 4 y 5 de mayo</label><br />
+                          </li>
+                          <li>
+                            <input id="mayo_4" type="radio" name="asistencia" value="mayo_4" />
+                            <label for="mayo_4">Asistiré solo el día 4 de mayo</label><br />
+                          </li>
+                          <li>
+                            <input id="mayo5" type="radio" name="asistencia" value="mayo5" />
+                            <label for="mayo5">Asistiré solo el día 5 de mayo</label>
+                          </li>
+                          </ul>
+                         </div>
+                   </div>
+                </fieldset>  
+              
+            </form>
+          </div>
+              </header> 
+              <br>
+           <footer>
+            <p class="obligatorio"> <abbr title="required"  class="obligatorio" ><strong>*</strong></abbr>los campos son obligatorios.</p>
+                 <div id="recuadroFoto">
+                   
+                      <input title="casilla para aceptar condiciones" required   aria-invalid="true" tabindex=0 type="checkbox" id="aceptar" name="aceptar" >
+                      
+                      <label for="aceptar" class="colocar_aceptar">He leído y acepto la política de privacidad y el aviso legal<abbr title="required"  class="obligatorio" ><strong>*</strong></abbr></label><br>
+                 <button tabindex=0 type="submit" name="enviar_formulario" id="enviar"  >
+                    ENVIAR
+                </button>
+                 </div>
+              
+              </footer> 
+     <br>
+     <div class="w3c">
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="¡CSS Válido!" />
+            </a>
+            <a href="https://www.gueury.com/mozilla/">
+                <img src="https://www.gueury.com/mozilla/tidy_32.gif"
+                alt="Validated by HTML Validator (based on Tidy) " height="32" width="78"/>
+              </a>
+        </div>  
+    </body>
+
+</html>
